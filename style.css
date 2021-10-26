@@ -1,0 +1,32 @@
+
+.web-counter-section
+{
+    height: 100vh;
+    background-image: url(519924.jpg);
+    background-size: cover;
+}
+.counterIn
+{
+    padding: 260px 0px 0px;
+}
+.button_
+{
+    background-color: #733DD8;
+    color: #DED7FF;
+    padding: 5px 40px;
+    border: none;
+    font-size: 60px;
+    border-radius: 25px;
+}
+.button_:focus
+{
+    outline: none;
+}
+#countNum{
+    color: #733DD8;
+    background-color: #DED7FF;
+    display: inline;
+    padding: 20px 30px;
+    border-radius: 100%;
+    font-size: 20px;
+}
