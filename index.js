@@ -1,31 +1,20 @@
-var number = 0;
-var msg = "";
+const buttons = document.querySelectorAll(".button_");
+let counterValue = document.querySelector("#countNum");
+let count = 0;
 
-function decFunc() {
-    number = document.getElementById('countNum').innerHTML;
-    if (number == 0) {
-        msg = "INVALID input!";
-    }
-    else if (number == "INVALID input!") {
-        msg = 0;
-    } 
-    else{
-        number = number - 1;
-        msg = number;
-    }
-    document.getElementById('countNum').innerHTML = msg;
-}
-
-function incFunc(){
-    if (number == "NaN") {
-        number = 0;
-    } 
-    number = parseInt(document.getElementById('countNum').innerHTML);
-    number = number + 1;
-    document.getElementById('countNum').innerHTML = number;
-}
-function resetFunc(){
-    number = document.getElementById('countNum').innerHTML;
-    number = 0;
-    document.getElementById('countNum').innerHTML = number;
-}
+buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const classList = btn.classList;
+        if (classList.contains("increament")) {
+            count +=1;
+        }
+        else if(classList.contains("decreament"))
+        {
+            count -=1;
+        }
+        else{
+            count = 0;
+        }
+        counterValue.textContent = count;
+    });
+});
